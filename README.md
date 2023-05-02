@@ -17,7 +17,6 @@ def decrypt(ciphertext, key):
     plaintext = cipher.decrypt(ciphertext[AES.block_size:])
     return plaintext.rstrip(b"\0")
 
-Пример за използване:
 key = hashlib.sha256(b"my_secret_key").digest()
 message = b"Hello, world! This is a secret message."
 ciphertext = encrypt(message, key)
